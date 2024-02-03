@@ -1,2 +1,1 @@
-puts 1
-price = 1
+puts 3.1
