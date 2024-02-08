@@ -33,3 +33,46 @@ end
 introduce("John", 30) 
 introduce("Jane", 25)
 
+def add(a,b)
+    return a + b
+end
+sum = add(1,2)
+puts sum
+
+class Menu
+    attr_accessor :name
+    attr_accessor :price
+    def show(data)
+        return "私は#{data}です"
+    end
+ end
+menu1 = Menu.new
+menu2 = menu1.show("メニュー")
+puts menu2
+
+class Menu
+    def get_total_price(count)
+        self_price = 500
+        total_price = self_price * count
+        total_price -= 100 if count >= 3
+        total_price
+    end
+end
+menu1 = Menu.new
+puts menu1.get_total_price(3)
+
+
+fruits = ["apple", "banana", "orange"]
+index = 0
+fruits.each do |fruit|
+    puts "#{index}. #{fruit}"
+    index += 1
+end
+
+puts "入力してください"
+name = gets.chomp.to_i
+puts "入力されたのは#{name}です"
+
+require "date"
+date1 = Date.today
+puts date1
